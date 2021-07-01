@@ -76,11 +76,8 @@ contract Betting is ERC721{
         require(msg.sender == books[_book].bookie, "Only the bookie can settle the bet");
         books[_book].winner = _winner;
         books[_book].complete = true;
-        uint totalDebt = 0;
-        for(uint i = 0; i < books[_book].optionsDebt.length; i++){
-            totalDebt += books[_book].optionsDebt[i];
-        }
-        uint bookieFee = books[_book].totalBets - totalDebt;
+        //Bookie fee is the totalBets - the bets to be paid for the winner
+        uint bookieFee = books[_book].totalBets - books[_book].optionsDebt[_winner] ;
         payable(books[_book].bookie).transfer(bookieFee);
     }
 
