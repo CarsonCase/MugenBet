@@ -81,7 +81,6 @@ contract Betting is ERC721{
     * @dev fundBet  */
     function fundBet(bytes32 _book) external payable{
         require(msg.sender == books[_book].bookie, "Only the bookie can provide the books funding");
-        _mint(msg.sender, latestId);
         uint sum = 0;
         uint each = msg.value / books[_book].optionsCount;
         require(each > 1, "Must send enough wei to fund each option");
@@ -95,10 +94,13 @@ contract Betting is ERC721{
 
     function getOdds(bytes32 _book, uint _option, uint _amount) public view returns(uint){
         book storage b = books[_book];
+        if(b.totalBets == 0){
+            return _amount;
+        }
         return(
             (b.reductionRate/2) * 
             (((_amount + b.optionsAmounts[_option]) * _amount) / 
-            books[_book].totalBets) / 
+            b.totalBets) / 
             oneHundredPercent
         );
     }
@@ -106,7 +108,7 @@ contract Betting is ERC721{
     function _newBook(address _bookie, uint _numOptions, uint reductionRate) internal {
         require(reductionRate < oneHundredPercent, "Reduction rate cannot be more than 100%");
         require(_numOptions > 1, "Must have more than 1 option to bet on");
-        book memory b = book(_bookie, reductionRate, new uint[](0), _numOptions, 0, false, 0);
+        book memory b = book(_bookie, reductionRate, new uint[](_numOptions), _numOptions, 0, false, 0);
         bytes32 key = keccak256(abi.encodePacked(_bookie, reductionRate, _numOptions,msg.sender,block.timestamp));
         require(books[key].bookie == address(0), "book already exists at this key, you're likely trying to create multiple of the same books in one tx. Don't do this.");
         books[key] = b;
