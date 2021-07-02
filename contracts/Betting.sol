@@ -126,7 +126,7 @@ contract Betting is ERC721{
         return(
             (
                 (_amount * (oneHundredPercent - b.reductionRate)) * 
-                ((b.totalBets + _amount) / (_amount * b.optionsAmounts[_option]))
+                ((oneHundredPercent * (b.totalBets + _amount)) / oneHundredPercent * ((_amount + b.optionsAmounts[_option]))) / oneHundredPercent
             ) / oneHundredPercent
         );
     }
