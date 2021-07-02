@@ -63,21 +63,6 @@ contract Betting is ERC721{
     }
 
     /**
-    * @dev Function to call the winner of a bet. Only callable by bookie.
-    * @param _book to call
-    * @param _winner must be within options
-    */
-    function callBet(bytes32 _book, uint _winner)external{
-        require(_winner < books[_book].optionsCount, "Winner must be within options");
-        require(msg.sender == books[_book].bookie, "Only the bookie can settle the bet");
-        books[_book].winner = _winner;
-        books[_book].complete = true;
-        //Bookie fee is the totalBets - the bets to be paid for the winner
-        uint bookieFee = books[_book].totalBets - books[_book].optionsDebt[_winner] ;
-        payable(books[_book].bookie).transfer(bookieFee);
-    }
-
-    /**
     * @dev fundBet function for a bookie only to add some liquidity to a bet. People need money to win at the start
     * @param _book the book hash to fund
       */
@@ -99,6 +84,7 @@ contract Betting is ERC721{
     * @param _book is the book 
     * @param _option is the option index to bet on
     * @param _amount is the amount to bet. Your odds depend on this
+    * @return payout if win
      */
     function getOdds(bytes32 _book, uint _option, uint _amount) public view returns(uint){
         require(books[_book].optionsCount > _option, "option must be within options in book");
@@ -128,12 +114,28 @@ contract Betting is ERC721{
     }
 
     /**
+    * @dev Function to call the winner of a bet. Only callable by bookie.
+    * @param _book to call
+    * @param _winner must be within options
+    */
+    function callBet(bytes32 _book, uint _winner)public{
+        require(_winner < books[_book].optionsCount, "Winner must be within options");
+        require(msg.sender == books[_book].bookie, "Only the bookie can settle the bet");
+        books[_book].winner = _winner;
+        books[_book].complete = true;
+        //Bookie fee is the totalBets - the bets to be paid for the winner
+        uint bookieFee = books[_book].totalBets - books[_book].optionsDebt[_winner] ;
+        payable(books[_book].bookie).transfer(bookieFee);
+    }
+
+    /**
     * @dev _newBook creates a new book.....
     * @param _bookie is the bookie who can fund and collect rees from reducing odds
     * @param _numOptions is how many things you can bet on
     * @param reductionRate is the rate by which books are reduced. A 2000 (20%) rate would turn 2/3 odds to 3/5 odds 
+    * @return the book id
     */
-    function _newBook(address _bookie, uint _numOptions, uint reductionRate) internal {
+    function _newBook(address _bookie, uint _numOptions, uint reductionRate) internal returns(bytes32){
         require(reductionRate < oneHundredPercent, "Reduction rate cannot be more than 100%");
         require(_numOptions > 1, "Must have more than 1 option to bet on");
         book memory b = book(_bookie, reductionRate, new uint[](_numOptions), new uint[](_numOptions), _numOptions, 0, false, 0);
@@ -141,6 +143,7 @@ contract Betting is ERC721{
         require(books[key].bookie == address(0), "book already exists at this key, you're likely trying to create multiple of the same books in one tx. Don't do this.");
         books[key] = b;
         emit NewBook(_bookie, key);
+        return key;
     }
 
     /**
