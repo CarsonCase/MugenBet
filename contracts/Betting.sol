@@ -41,10 +41,6 @@ contract Betting is ERC721{
     /// @dev constructor
     constructor()ERC721("Betting Ticket","BET"){}
 
-    function makeBookTest()external{
-        _newBook(msg.sender, 2, 2000);
-    }
-
     /**
     * @dev function to place a bet. Anyone can call on any book as long as the option is included in the book
     * @param _book is the book hash
