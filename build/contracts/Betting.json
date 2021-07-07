@@ -19020,34 +19020,34 @@
     "absolutePath": "/home/carsoncase/Documents/programming/blockchain/Seth/MugenBet/smartContracts/contracts/Betting.sol",
     "exportedSymbols": {
       "Address": [
-        1998
+        2039
       ],
       "Betting": [
         544
       ],
       "Context": [
-        2021
+        2062
       ],
       "ERC165": [
-        2248
+        2289
       ],
       "ERC721": [
-        1541
+        1582
       ],
       "IERC165": [
-        2260
+        2301
       ],
       "IERC721": [
-        1657
+        1698
       ],
       "IERC721Metadata": [
-        1702
+        1743
       ],
       "IERC721Receiver": [
-        1675
+        1716
       ],
       "Strings": [
-        2224
+        2265
       ]
     },
     "id": 545,
@@ -19072,7 +19072,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 545,
-        "sourceUnit": 1542,
+        "sourceUnit": 1583,
         "src": "58:57:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -19085,7 +19085,7 @@
               "id": 4,
               "name": "ERC721",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1541,
+              "referencedDeclaration": 1582,
               "src": "486:6:0"
             },
             "id": 5,
@@ -19105,12 +19105,12 @@
         "id": 544,
         "linearizedBaseContracts": [
           544,
-          1541,
-          1702,
-          1657,
-          2248,
-          2260,
-          2021
+          1582,
+          1743,
+          1698,
+          2289,
+          2301,
+          2062
         ],
         "name": "Betting",
         "nameLocation": "475:7:0",
@@ -19881,7 +19881,7 @@
                   "id": 64,
                   "name": "ERC721",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1541,
+                  "referencedDeclaration": 1582,
                   "src": "1120:6:0"
                 },
                 "nodeType": "ModifierInvocation",
@@ -20638,7 +20638,7 @@
                       "name": "transferFrom",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1083,
+                      "referencedDeclaration": 1124,
                       "src": "1887:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -20691,7 +20691,7 @@
                       "name": "_burn",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1372,
+                      "referencedDeclaration": 1413,
                       "src": "1944:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
@@ -25411,7 +25411,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1321,
+                      "referencedDeclaration": 1362,
                       "src": "6105:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -26261,34 +26261,34 @@
     "absolutePath": "/home/carsoncase/Documents/programming/blockchain/Seth/MugenBet/smartContracts/contracts/Betting.sol",
     "exportedSymbols": {
       "Address": [
-        1998
+        2039
       ],
       "Betting": [
         544
       ],
       "Context": [
-        2021
+        2062
       ],
       "ERC165": [
-        2248
+        2289
       ],
       "ERC721": [
-        1541
+        1582
       ],
       "IERC165": [
-        2260
+        2301
       ],
       "IERC721": [
-        1657
+        1698
       ],
       "IERC721Metadata": [
-        1702
+        1743
       ],
       "IERC721Receiver": [
-        1675
+        1716
       ],
       "Strings": [
-        2224
+        2265
       ]
     },
     "id": 545,
@@ -26313,7 +26313,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 545,
-        "sourceUnit": 1542,
+        "sourceUnit": 1583,
         "src": "58:57:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -26326,7 +26326,7 @@
               "id": 4,
               "name": "ERC721",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1541,
+              "referencedDeclaration": 1582,
               "src": "486:6:0"
             },
             "id": 5,
@@ -26346,12 +26346,12 @@
         "id": 544,
         "linearizedBaseContracts": [
           544,
-          1541,
-          1702,
-          1657,
-          2248,
-          2260,
-          2021
+          1582,
+          1743,
+          1698,
+          2289,
+          2301,
+          2062
         ],
         "name": "Betting",
         "nameLocation": "475:7:0",
@@ -27122,7 +27122,7 @@
                   "id": 64,
                   "name": "ERC721",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1541,
+                  "referencedDeclaration": 1582,
                   "src": "1120:6:0"
                 },
                 "nodeType": "ModifierInvocation",
@@ -27879,7 +27879,7 @@
                       "name": "transferFrom",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1083,
+                      "referencedDeclaration": 1124,
                       "src": "1887:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -27932,7 +27932,7 @@
                       "name": "_burn",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1372,
+                      "referencedDeclaration": 1413,
                       "src": "1944:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
@@ -32652,7 +32652,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1321,
+                      "referencedDeclaration": 1362,
                       "src": "6105:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -33504,7 +33504,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-03T20:36:23.577Z",
+  "updatedAt": "2021-07-07T21:18:23.053Z",
   "devdoc": {
     "author": "Carson Case: carsonpcase@gmail.com",
     "kind": "dev",

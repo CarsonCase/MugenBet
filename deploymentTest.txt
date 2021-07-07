@@ -1,7 +1,21 @@
 
 Compiling your contracts...
 ===========================
-> Everything is up to date, there is nothing to compile.
+> Compiling ./contracts/Betting.sol
+> Compiling ./contracts/MugenBet.sol
+> Compiling @openzeppelin/contracts/access/Ownable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
+> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
+> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
+> Compiling @openzeppelin/contracts/utils/Address.sol
+> Compiling @openzeppelin/contracts/utils/Context.sol
+> Compiling @openzeppelin/contracts/utils/Strings.sol
+> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
+> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
+> Artifacts written to /home/carsoncase/Documents/programming/blockchain/Seth/MugenBet/smartContracts/build/contracts
+> Compiled successfully using:
+   - solc: 0.8.4+commit.c7e474f2.Emscripten.clang
 
 
 
@@ -9,31 +23,31 @@ Migrations dry-run (simulation)
 ===============================
 > Network name:    'kovan-fork'
 > Network id:      42
-> Block gas limit: 12500000 (0xbebc20)
+> Block gas limit: 12487794 (0xbe8c72)
 
 
 1_migrate.js
 ============
 
-   Deploying 'MugenBet'
+   Replacing 'MugenBet'
    --------------------
-   > block number:        25889714
-   > block timestamp:     1625344649
+   > block number:        25976717
+   > block timestamp:     1625692772
    > account:             0x7A3876E516d7F221Eb4791410F7434F20f01773A
-   > balance:             1.161234848
-   > gas used:            3974564 (0x3ca5a4)
+   > balance:             1.0565541305
+   > gas used:            4072859 (0x3e259b)
    > gas price:           25 gwei
    > value sent:          0 ETH
-   > total cost:          0.0993641 ETH
+   > total cost:          0.101821475 ETH
 
    -------------------------------------
-   > Total cost:           0.0993641 ETH
+   > Total cost:         0.101821475 ETH
 
 
 Summary
 =======
 > Total deployments:   1
-> Final cost:          0.0993641 ETH
+> Final cost:          0.101821475 ETH
 
 
 
@@ -43,35 +57,35 @@ Starting migrations...
 ======================
 > Network name:    'kovan'
 > Network id:      42
-> Block gas limit: 12500000 (0xbebc20)
+> Block gas limit: 12487794 (0xbe8c72)
 
 
 1_migrate.js
 ============
 
-   Deploying 'MugenBet'
+   Replacing 'MugenBet'
    --------------------
-   > transaction hash:    0xa982b4150c44f35d8a76532e45c3b429553c28963fb5ef3b1a1bb8c3e8484107
-   > Blocks: 2            Seconds: 4
-   > contract address:    0x4A86C7462eb125d610D5a05CcFaDf26f4ED2F3e4
-   > block number:        25889717
-   > block timestamp:     1625344660
+   > transaction hash:    0x90d9c9dbb3c033d1dd534bb6a45fac8181aac7948d3304882428d0c8739a3270
+   > Blocks: 23           Seconds: 92
+   > contract address:    0xbb7Bb954336F05bb5F14232f802aC05FC5b928F0
+   > block number:        25976734
+   > block timestamp:     1625692780
    > account:             0x7A3876E516d7F221Eb4791410F7434F20f01773A
-   > balance:             1.159707348
-   > gas used:            4035664 (0x3d9450)
+   > balance:             1.0550266305
+   > gas used:            4133959 (0x3f1447)
    > gas price:           25 gwei
    > value sent:          0 ETH
-   > total cost:          0.1008916 ETH
+   > total cost:          0.103348975 ETH
 
    > Saving artifacts
    -------------------------------------
-   > Total cost:           0.1008916 ETH
+   > Total cost:         0.103348975 ETH
 
 
 Summary
 =======
 > Total deployments:   1
-> Final cost:          0.1008916 ETH
+> Final cost:          0.103348975 ETH
 
 
 
