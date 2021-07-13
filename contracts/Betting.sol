@@ -25,6 +25,7 @@ contract Betting is ERC721{
         uint reductionRate;
         uint[] optionsAmounts;
         uint[] optionsDebt;
+        uint[] betTickets;
         uint optionsCount;
         uint totalBets;
         bool complete;
@@ -158,6 +159,7 @@ contract Betting is ERC721{
             _option,
             odds
         );
+        books[_book].betTickets.push(latestId);
         books[_book].totalBets += _amount;
         books[_book].optionsAmounts[_option] += _amount;
         books[_book].optionsDebt[_option] += odds;

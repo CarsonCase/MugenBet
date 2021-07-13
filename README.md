@@ -10,6 +10,7 @@ Components
         uint reductionRate;
         uint[] optionsAmounts;
         uint[] optionsDebt;
+        uint[] betTickets;                  //NEW -> For Frontend
         uint optionsCount;
         uint totalBets;
         bool complete;
