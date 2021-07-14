@@ -139,7 +139,8 @@ contract Betting is ERC721{
     function _newBook(address _bookie, uint _numOptions, uint reductionRate) internal returns(bytes32){
         require(reductionRate < oneHundredPercent, "Reduction rate cannot be more than 100%");
         require(_numOptions > 1, "Must have more than 1 option to bet on");
-        book memory b = book(_bookie, reductionRate, new uint[](_numOptions), new uint[](_numOptions), _numOptions, 0, false, 0);
+        uint[] memory a;
+        book memory b = book(_bookie, reductionRate, new uint[](_numOptions), new uint[](_numOptions), a, _numOptions, 0, false, 0);
         bytes32 key = keccak256(abi.encodePacked(_bookie, reductionRate, _numOptions,msg.sender,block.timestamp));
         require(books[key].bookie == address(0), "book already exists at this key, you're likely trying to create multiple of the same books in one tx. Don't do this.");
         books[key] = b;
