@@ -29,9 +29,9 @@ contract MugenBet is Betting, Ownable{
     * @dev settleGame called with a game's results
     * @param _winner is the index of the winner of the game
      */
-    function settleGame(bytes32 _book, uint _winner)external onlyOwner{
-        callBet(_book, _winner);
-        emit GameOver(_book);
+    function settleGame(uint _winner)external onlyOwner{
+        callBet(games[games.length-1], _winner);
+        emit GameOver(games[games.length-1]);
     }
 
     /**
