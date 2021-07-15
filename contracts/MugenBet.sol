@@ -34,6 +34,19 @@ contract MugenBet is Betting, Ownable{
         emit GameOver(games[games.length-1]);
     }
 
+    /// @dev bellow the next three are getter functions for book array
+    function getOptionsAmounts(bytes32 _book) external view returns(uint[] memory) {
+        return books[_book].optionsAmounts;
+    }
+
+    function getOptionsDebt(bytes32 _book) external view returns(uint[] memory){
+        return books[_book].optionsDebt;
+    }
+
+    function getBetTickets(bytes32 _book) external view returns(uint[] memory){
+        return books[_book].betTickets;
+    }
+
     /**
     * @dev returns the first two amounts of a game for frontend
     * @param _game is the game id
