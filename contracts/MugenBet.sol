@@ -20,7 +20,7 @@ contract MugenBet is Betting, Ownable{
     * @dev newGame function called by owner to create a game, and push it to array
      */
     function newGame()external onlyOwner{
-        bytes32 key = _newBook(address(this), OPTIONS, reductionRate);
+        bytes32 key = _newBook(msg.sender, OPTIONS, reductionRate);
         games.push(key);
         emit NewGame(key);
     }
