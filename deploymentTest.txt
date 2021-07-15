@@ -1,42 +1,39 @@
 
 Compiling your contracts...
 ===========================
-> Compiling ./contracts/MugenBet.sol
-> Artifacts written to /home/carsoncase/Documents/programming/blockchain/Seth/MugenBet/smartContracts/build/contracts
-> Compiled successfully using:
-   - solc: 0.8.4+commit.c7e474f2.Emscripten.clang
+> Everything is up to date, there is nothing to compile.
 
 
 
 Migrations dry-run (simulation)
 ===============================
-> Network name:    'kovan-fork'
-> Network id:      42
-> Block gas limit: 12500000 (0xbebc20)
+> Network name:    'ropsten-fork'
+> Network id:      3
+> Block gas limit: 8000000 (0x7a1200)
 
 
 1_migrate.js
 ============
 
-   Replacing 'MugenBet'
+   Deploying 'MugenBet'
    --------------------
-   > block number:        26128670
-   > block timestamp:     1626300802
+   > block number:        10644277
+   > block timestamp:     1626386697
    > account:             0x7A3876E516d7F221Eb4791410F7434F20f01773A
-   > balance:             0.2081719755000001
-   > gas used:            4130694 (0x3f0786)
-   > gas price:           25 gwei
+   > balance:             0.491399218
+   > gas used:            4300391 (0x419e67)
+   > gas price:           2 gwei
    > value sent:          0 ETH
-   > total cost:          0.10326735 ETH
+   > total cost:          0.008600782 ETH
 
    -------------------------------------
-   > Total cost:          0.10326735 ETH
+   > Total cost:         0.008600782 ETH
 
 
 Summary
 =======
 > Total deployments:   1
-> Final cost:          0.10326735 ETH
+> Final cost:          0.008600782 ETH
 
 
 
@@ -44,37 +41,41 @@ Summary
 
 Starting migrations...
 ======================
-> Network name:    'kovan'
-> Network id:      42
-> Block gas limit: 12500000 (0xbebc20)
+> Network name:    'ropsten'
+> Network id:      3
+> Block gas limit: 8000000 (0x7a1200)
 
 
 1_migrate.js
 ============
 
-   Replacing 'MugenBet'
+   Deploying 'MugenBet'
    --------------------
-   > transaction hash:    0xfe5cc2cc081fb4ad693812dd1cae750064476dc1ebe33a68a8df038123c1458e
-   > Blocks: 2            Seconds: 4
-   > contract address:    0xB725220Ff545331930d3B292C4E9368a00f3C09b
-   > block number:        26128673
-   > block timestamp:     1626300820
+   > transaction hash:    0xfe46b801498347738975d8f436993fcc3f122974caa4ea9e0552e08e9b1f7d9c
+   > Blocks: 11           Seconds: 80
+   > contract address:    0x35c54B5A94C024dB3B0F5815cf042aA4dABf91FF
+   > block number:        10644290
+   > block timestamp:     1626386779
    > account:             0x7A3876E516d7F221Eb4791410F7434F20f01773A
-   > balance:             0.2066444755000001
-   > gas used:            4191794 (0x3ff632)
-   > gas price:           25 gwei
+   > balance:             0.41277018
+   > gas used:            4361491 (0x428d13)
+   > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.10479485 ETH
+   > total cost:          0.08722982 ETH
 
+   Pausing for 2 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 10644292)
+   > confirmation number: 3 (block: 10644294)
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.10479485 ETH
+   > Total cost:          0.08722982 ETH
 
 
 Summary
 =======
 > Total deployments:   1
-> Final cost:          0.10479485 ETH
+> Final cost:          0.08722982 ETH
 
 
 
