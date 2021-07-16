@@ -7,33 +7,33 @@ Compiling your contracts...
 
 Migrations dry-run (simulation)
 ===============================
-> Network name:    'ropsten-fork'
-> Network id:      3
-> Block gas limit: 8000000 (0x7a1200)
+> Network name:    'kovan-fork'
+> Network id:      42
+> Block gas limit: 12499988 (0xbebc14)
 
 
 1_migrate.js
 ============
 
-   Deploying 'MugenBet'
+   Replacing 'MugenBet'
    --------------------
-   > block number:        10644277
-   > block timestamp:     1626386697
+   > block number:        26152391
+   > block timestamp:     1626395772
    > account:             0x7A3876E516d7F221Eb4791410F7434F20f01773A
-   > balance:             0.491399218
+   > balance:             0.1861600605000001
    > gas used:            4300391 (0x419e67)
-   > gas price:           2 gwei
+   > gas price:           25 gwei
    > value sent:          0 ETH
-   > total cost:          0.008600782 ETH
+   > total cost:          0.107509775 ETH
 
    -------------------------------------
-   > Total cost:         0.008600782 ETH
+   > Total cost:         0.107509775 ETH
 
 
 Summary
 =======
 > Total deployments:   1
-> Final cost:          0.008600782 ETH
+> Final cost:          0.107509775 ETH
 
 
 
@@ -41,41 +41,37 @@ Summary
 
 Starting migrations...
 ======================
-> Network name:    'ropsten'
-> Network id:      3
-> Block gas limit: 8000000 (0x7a1200)
+> Network name:    'kovan'
+> Network id:      42
+> Block gas limit: 12499988 (0xbebc14)
 
 
 1_migrate.js
 ============
 
-   Deploying 'MugenBet'
+   Replacing 'MugenBet'
    --------------------
-   > transaction hash:    0xfe46b801498347738975d8f436993fcc3f122974caa4ea9e0552e08e9b1f7d9c
-   > Blocks: 11           Seconds: 80
-   > contract address:    0x35c54B5A94C024dB3B0F5815cf042aA4dABf91FF
-   > block number:        10644290
-   > block timestamp:     1626386779
+   > transaction hash:    0x3734e8554d051df1ec34f4d7b48d6f71ec4545ce4342b8e1c2c3f1288fb453b9
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x876DeCdE0da1E6FDDc5058203A8fb0e5568205e1
+   > block number:        26152393
+   > block timestamp:     1626395780
    > account:             0x7A3876E516d7F221Eb4791410F7434F20f01773A
-   > balance:             0.41277018
+   > balance:             0.1846325605000001
    > gas used:            4361491 (0x428d13)
-   > gas price:           20 gwei
+   > gas price:           25 gwei
    > value sent:          0 ETH
-   > total cost:          0.08722982 ETH
+   > total cost:          0.109037275 ETH
 
-   Pausing for 2 confirmations...
-   ------------------------------
-   > confirmation number: 1 (block: 10644292)
-   > confirmation number: 3 (block: 10644294)
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.08722982 ETH
+   > Total cost:         0.109037275 ETH
 
 
 Summary
 =======
 > Total deployments:   1
-> Final cost:          0.08722982 ETH
+> Final cost:          0.109037275 ETH
 
 
 
