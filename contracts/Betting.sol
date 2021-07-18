@@ -58,7 +58,6 @@ contract Betting is ERC721{
     function settleBet(uint ticket) external{
         require(books[betTicketFromNFT[ticket].book].complete, "Bet must be complete");
         require(books[betTicketFromNFT[ticket].book].winner == betTicketFromNFT[ticket].option, "Must have bet on the winner");
-        transferFrom(msg.sender, address(this), ticket);
         _burn(ticket);
         payable(msg.sender).transfer(betTicketFromNFT[ticket].payout);
     }
